@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de productos</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="contacto.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+
+    <header>
+        <div class="logo">
+            <a href="index.html" style="color: inherit; text-decoration: none;"><strong>Kuromi</strong></a> <!-- Enlace a la página de inicio -->
+        </div>     
+        <nav>
+            <ul id="menu">
+                <li><a href="Index.html">Inicio</a></li>
+                <li><a href="productos.html">Productos</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+            <div class="hamburger" onclick="toggleMenu()">
+                &#9776;
+            </div>
+        </nav>
+    </header>
+    <!-- Sección de contacto del lugar -->
+    <section class="seccion-ubicacion">
+        <div class="contenedor-ubicacion">
+            <!-- Columna izquierda - Información de contacto -->
+            <div class="info-contacto">
+                <h2>Contáctanos</h2>
+                <div class="contacto-item">
+                    <img src="iconos/correo.png" alt="Icono Correo" class="icono-contacto">
+                    <div>
+                        <strong>Correo:</strong>
+                        <p>kuromistore@hotmail.com</p>
+                    </div>
+                </div>
+                <div class="contacto-item">
+                    <img src="iconos/telefono.png" alt="Icono Teléfono" class="icono-contacto">
+                    <div>
+                        <strong>Teléfono:</strong>
+                        <p>+22 338 732</p>
+                    </div>
+                </div>
+                <div class="contacto-item">
+                    <img src="iconos/ubicacion.png" alt="Icono Ubicación" class="icono-contacto">
+                    <div>
+                        <strong>Ubicación:</strong>
+                        <p>Av. General Rumiñahui, Quito, Ecuador</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Columna derecha - Google Maps -->
+            <div class="mapa-ubicacion">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.745534297922!2d-78.44345013732605!3d-0.34608740290456486!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91d5bdecd424ffef%3A0xa6ad139992b0b8b4!2sConjunto%20Residencial%20Los%20Cactus!5e0!3m2!1ses!2sec!4v1731824275043!5m2!1ses!2sec" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+                    width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy">
+                </iframe>
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <!-- Formulario de contacto -->
+    <section class="seccion-contacto">
+        <div class="contenedor-contacto">
+            <!-- Columna izquierda -->
+            <div class="contacto-info">
+                <!-- Botones de contacto, como en el código anterior -->
+            </div>
+
+            <!-- Columna derecha (Formulario) -->
+            <div class="formulario-contacto">
+                <form id="contactForm">
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" id="nombre" name="nombre" required>
+
+                    <label for="email">Correo Electrónico:</label>
+                    <input type="email" id="email" name="email" required>
+
+                    <label for="mensaje">Mensaje:</label>
+                    <textarea id="mensaje" name="mensaje" required></textarea>
+
+                    <button type="submit">Enviar Mensaje</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal de confirmación -->
+    <div id="modalExito" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <p>Enviado exitosamente</p>
+        </div>
+    </div>
+
+    
+
+     <!-- Sección de pie de página -->
+     <footer class="footer">
+        <div class="footer-contenedor">
+            <!-- Información de la empresa o sitio -->
+            <div class="footer-info">
+                <h3>Kuromi</h3>
+                <p>&copy; 2024 Hecho por: Katherine Jacome</p>
+            </div>
+
+            <!-- Enlaces de navegación -->
+            <div class="footer-links">
+                <h4>Enlaces Rápidos</h4>
+                <ul>
+                    <li><a href="Index.html">Inicio</a></li>
+                    <li><a href="productos.html">Productos</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+            </div>
+
+            <!-- Información de contacto -->
+            <div class="footer-contacto">
+                <h4>Contáctanos</h4>
+                <p><strong>Correo:</strong> kuromistore@hotmail.com</p>
+                <p><strong>Teléfono:</strong> +22 338 732</p>
+                <p><strong>Ubicación:</strong> Av. General Rumiñahui, Quito, Ecuador</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Botón de WhatsApp con imagen -->
+    <a href="https://wa.me/123456789" id="whatsapp-button" target="_blank">
+        <img src="iconos/whatsapp.png" alt="WhatsApp" />
+    </a>
+
+
+
+    <script src="contacto.js"></script>
+
+    <script>
+        function toggleMenu() {
+            var menu = document.getElementById("menu");
+            menu.classList.toggle("active");
+        }
+    </script>
+
+</body>
+</html>

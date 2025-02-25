@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Página de Productos</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="productos.css">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    </head>
+<body>
+
+
+    <header>
+        <div class="logo">
+            <a href="index.html" style="color: inherit; text-decoration: none;"><strong>Kuromi</strong></a> <!-- Enlace a la página de inicio -->
+        </div>    
+        <nav>
+            <ul id="menu">
+                <li><a href="Index.html">Inicio</a></li>
+                <li><a href="productos.html">Productos</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+            <div class="hamburger" onclick="toggleMenu()">
+                &#9776;
+            </div>
+        </nav>
+    </header>
+
+
+    <section class="carousel">
+        <div class="carousel-container">
+            <div class="carousel-slide active">
+                <img src="images/imagen1.png" alt="Imagen 1">
+            </div>
+            <div class="carousel-slide">
+                <img src="images/imagen2.png" alt="Imagen 2">
+            </div>
+            <div class="carousel-slide">
+                <img src="images/bg.png" alt="Imagen 3">
+            </div>
+        </div>
+        <button class="carousel-control prev" onclick="moveCarousel(-1)">&#10094;</button>
+        <button class="carousel-control next" onclick="moveCarousel(1)">&#10095;</button>
+    </section>
+
+    <h1 class="kuromi-title">Productos de Kuromi</h1>
+    <table class="kuromi-table">
+        <thead>
+            <tr>
+                <th>Producto</th>
+                <th>Descripción</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><img src="images/Zapatost1.png" alt="Producto 1"></td>
+                <td>Zapatillas blancas y lilas con ilustraciones de Kuromi. Perfectas para un look urbano y femenino.</td>
+            </tr>
+            <tr>
+                <td><img src="images/Accesoriost2.png" alt="Producto 2"></td>
+                <td> Collar con cuentas negras, lilas y rosadas, y un dije central de Kuromi con pequeños colgantes de estrellas. Estilo kawaii único.
+                </td>
+            </tr>
+            <tr>
+                <td><img src="images/Camisetat3.png" alt="Producto 3"></td>
+                <td>Camiseta cómoda con un diseño gráfico de Kuromi en pose coqueta. Combina estilo moderno y adorable.</td>
+            </tr>
+        </tbody>
+    </table>
+    <script src="productos.js"></script>
+
+     <!-- Sección de pie de página -->
+     <footer class="footer">
+        <div class="footer-contenedor">
+            <!-- Información de la empresa o sitio -->
+            <div class="footer-info">
+                <h3>Kuromi</h3>
+                <p>&copy; 2024 Hecho por: Katherine Jacome</p>
+            </div>
+
+            <!-- Enlaces de navegación -->
+            <div class="footer-links">
+                <h4>Enlaces Rápidos</h4>
+                <ul>
+                    <li><a href="Index.html">Inicio</a></li>
+                    <li><a href="productos.html">productos</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+            </div>
+
+            <!-- Información de contacto -->
+            <div class="footer-contacto">
+                <h4>Contáctanos</h4>
+                <p><strong>Correo:</strong> kuromistore@hotmail.com</p>
+                <p><strong>Teléfono:</strong> +22 338 732</p>
+                <p><strong>Ubicación:</strong> Av. General Rumiñahui, Quito, Ecuador</p>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- Botón de WhatsApp con imagen -->
+    <a href="https://wa.me/123456789" id="whatsapp-button" target="_blank">
+        <img src="iconos/whatsapp.png" alt="WhatsApp" />
+    </a>
+
+
+    <script>
+        function toggleMenu() {
+            var menu = document.getElementById("menu");
+            menu.classList.toggle("active");
+        }
+    </script>
+
+</body>
+</html>

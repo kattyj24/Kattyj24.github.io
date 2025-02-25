@@ -1,0 +1,318 @@
+/* productos.css */
+section#productos {
+    padding: 20px;
+    background-color: #d0d0d0;
+}
+
+
+/* Sección de collage */
+.seccion-collage {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Columna izquierda (texto) */
+.seccion-collage .izquierda {
+    flex: 1;
+    padding-left: 20px; /* Espacio a la izquierda */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centrado vertical */
+}
+
+.seccion-collage .izquierda h2 {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+}
+
+.seccion-collage .izquierda p {
+    font-size: 1em;
+    line-height: 1.6;
+}
+
+/* Columna derecha (collage de imágenes) */
+.seccion-collage .derecha {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Collage de imágenes */
+.collage {
+    display: grid;
+    gap: 10px;
+    grid-template-areas:
+        "imagen1 imagen2"
+        "imagen3 imagen4";
+}
+
+/* Estilos para las imágenes del collage */
+.collage img {
+    width: 100%;
+    object-fit: cover;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+}
+
+.collage img:nth-child(1) {
+    grid-area: imagen1;
+}
+
+.collage img:nth-child(2) {
+    grid-area: imagen2;
+}
+
+.collage img:nth-child(3) {
+    grid-area: imagen3;
+}
+
+.collage img:nth-child(4) {
+    grid-area: imagen4;
+}
+
+
+/* Responsive: Ajustar el diseño a una columna en pantallas pequeñas */
+@media (max-width: 768px) {
+    .seccion-collage {
+        flex-direction: column;
+    }
+    
+    .collage {
+        grid-template-areas:
+            "imagen1"
+            "imagen2"
+            "imagen3"
+            "imagen4";
+    }
+}
+
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family:Poppins;
+    background-color: #d162ec;
+}
+
+/* Carrusel */
+.carousel {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    margin: 20px 0;
+}
+
+.carousel-container {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 100%;
+}
+
+.carousel-slide {
+    min-width: 100%;
+    position: relative;
+}
+
+.carousel-slide img {
+    width: 100%; /* La imagen siempre ocupa todo el ancho del slide */
+    height: 600px; /* Altura fija */
+    object-fit: cover; /* Ajusta la imagen sin distorsionarla */
+    display: block;
+    border-radius: 10px; /* Opcional: para esquinas redondeadas */
+}
+
+/* Botones de control */
+/* Botones de control */
+.carousel-control {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    z-index: 10;
+    width: 40px; /* Ancho igual al alto */
+    height: 40px; /* Alto igual al ancho */
+    border-radius: 50%; /* Hacer el botón completamente redondo */
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Centrar el icono */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Sombra opcional */
+    transition: background-color 0.3s ease;
+}
+
+.carousel-control:hover {
+    background-color: rgba(0, 0, 0, 0.8); /* Cambiar el color al pasar el ratón */
+}
+
+.carousel-control.prev {
+    left: 10px;
+}
+
+.carousel-control.next {
+    right: 10px;
+}
+/* General */
+body {
+    font-family: Poppins;
+    margin: 0;
+    padding: 0;
+    background-color: #f1eaf1; /* Fondo oscuro */
+    color: #998D9E; /* Color rosado claro */
+    text-align: center;
+}
+
+h1.kuromi-title {
+    font-size: 2.5rem;
+    margin: 20px 0;
+    color: #524E53; /* Título rosado */
+    text-shadow: 2px 2px 4px #000; /* Sombra negra */
+}
+
+/* Tabla */
+.kuromi-table {
+    width: 90%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    background-color: #74468a; /* Fondo morado oscuro */
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+/* Encabezados */
+.kuromi-table th {
+    background-color: #8750AB; /* Morado medio */
+    color: #D6CBDA; /* Rosado claro */
+    padding: 15px;
+    font-size: 18px;
+}
+
+/* Filas */
+.kuromi-table td {
+    padding: 15px;
+    text-align: center;
+    color: #D6CBDA; /* Texto rosado */
+    border-bottom: 1px solid #ccb6d4; /* Línea separadora */
+}
+
+/* Imágenes */
+.kuromi-table img {
+    width: 120px; /* Ancho fijo */
+    height: 120px; /* Alto fijo */
+    object-fit: cover;
+    border-radius: 50%; /* Imágenes circulares */
+    border: 3px solid #d298e9; /* Borde rosado */
+}
+
+/* Hover */
+.kuromi-table tr:hover {
+    background-color: #684b71; /* Morado más claro */
+    transition: 0.3s;
+}
+
+/* Última fila sin línea */
+.kuromi-table tr:last-child td {
+    border-bottom: none;
+}
+/* Estilos del pie de página */
+.footer {
+    background-color: #333333;
+    color: #fff;
+    padding: 40px 20px;
+    font-size: 16px;
+}
+
+.footer-contenedor {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-info,
+.footer-links,
+.footer-contacto {
+    flex: 1 1 30%;
+    padding: 20px;
+}
+
+.footer-info h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.footer-info p {
+    font-size: 14px;
+    color: #ccc;
+}
+
+.footer-links h4,
+.footer-contacto h4 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links ul li {
+    margin: 8px 0;
+}
+
+.footer-links ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+.footer-links ul li a:hover {
+    color: #D79DEB;
+}
+
+.footer-contacto p {
+    font-size: 14px;
+    color: #ccc;
+    margin-bottom: 8px;
+}
+
+.social-icons {
+    display: flex;
+    gap: 10px;
+}
+
+.social-icon img {
+    width: 30px;
+    height: 30px;
+    transition: transform 0.3s ease;
+}
+
+.social-icon img:hover {
+    transform: scale(1.1);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .footer-contenedor {
+        flex-direction: column;
+    }
+
+    .footer-info,
+    .footer-links,
+    .footer-contacto {
+        flex: 1 1 100%;
+        margin-bottom: 20px;
+    }
+}

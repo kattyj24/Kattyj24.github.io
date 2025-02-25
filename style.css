@@ -1,0 +1,526 @@
+body {
+    font-family:Poppins;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #8750AB;
+    padding: 20px 30px;
+    color: #fff;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    font-size: 30px;
+}
+
+nav {
+    position: relative;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease; /* Añadimos la transición de color */
+}
+
+/* Cambio de color cuando el ratón pasa por encima */
+nav ul li a:hover {
+    color: #D79DEB; /* Color dorado al hacer hover */
+}
+
+.hamburger {
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
+    color: #fff;
+}
+
+/* Estilos responsive para el menú */
+@media (max-width: 768px) {
+    nav ul {
+        display: none;
+        flex-direction: column;
+        background-color: #333;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 250px;
+        padding: 10px 0;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    nav ul.active {
+        display: flex;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+        text-align: center;
+    }
+
+    nav ul li a {
+        font-size: 18px;
+        padding: 10px 0;
+        width: 100%;
+        display: block;
+        color: #fff;
+    }
+
+    .hamburger {
+        display: block;
+    }
+}
+
+
+
+
+#intro {
+    position: relative;
+    background-image: url('images/imagen4.png'); /* Reemplaza con la ruta de tu imagen */
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 500px; /* Limita la altura */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+}
+
+#intro .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Fondo oscuro semi-transparente */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+#intro h2 {
+    font-size: 2em;
+    margin: 0;
+}
+
+#intro p {
+    font-size: 1.2em;
+    margin: 10px 20;
+}
+
+#intro .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 15px;
+    background-color: #8750AB;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 1em;
+}
+
+#intro .btn:hover {
+    background-color: #D79DEB;
+}
+
+
+#info {
+    padding: 40px 20px;
+    background-color: #f9f9f9;
+}
+
+#info .container {
+    display: flex;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+#info .column {
+    flex: 1;
+    padding: 20px;
+}
+
+/* Imagen centrada en la columna izquierda */
+#info .image-column {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#info .image-column img {
+    max-width: 75%;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* Texto alineado a la izquierda en la columna derecha */
+#info .text-column h3 {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+    color: #333; 
+}
+
+#info .text-column p {
+    font-size: 1em;
+    line-height: 1.6;
+    text-align: left;
+    color: #333; 
+}
+/* Media Query para pantallas pequeñas */
+@media (max-width: 768px) {
+    #info .container {
+        flex-direction: column; /* Cambia a una sola columna */
+    }
+
+    #info .column {
+        padding: 10px 0; /* Espaciado más pequeño para pantallas pequeñas */
+    }
+
+    #info .text-column h3 {
+        font-size: 1.5em; /* Reduce el tamaño del título en pantallas pequeñas */
+    }
+}
+
+
+
+
+#title-subtitle {
+    padding: 40px 20px;
+    background-color: #fff; /* Fondo blanco */
+    text-align: center; /* Centrar el texto */
+}
+
+#title-subtitle .container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+#title-subtitle .main-title {
+    font-size: 1.5em;
+    margin-bottom: 15px;
+    color: #333; /* Color del título principal */
+}
+
+#title-subtitle .sub-title {
+    font-size: 18px;
+    color: #777; /* Color del subtítulo */
+    margin-top: 0;
+}
+
+/* Media Query para pantallas pequeñas */
+@media (max-width: 768px) {
+    #title-subtitle .main-title {
+        font-size: 1.5em; /* Reducción del tamaño en pantallas pequeñas */
+    }
+
+    #title-subtitle .sub-title {
+        font-size: 1em; /* Reducción del tamaño en pantallas pequeñas */
+    }
+}
+
+
+#three-images {
+    padding: 40px 20px;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+#three-images .container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+#three-images .main-title {
+    font-size: 2.5em;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+#three-images .image-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap; /* Asegura que las imágenes se ajusten en pantallas pequeñas */
+}
+
+#three-images .image-item {
+    flex: 1;
+    max-width: 300px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#three-images .image-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Asegura que las imágenes llenen el cuadro sin distorsionarse */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra en las imágenes */
+}
+
+#three-images .image-item p {
+    margin-top: 10px;
+    font-size: 1em;
+    color: #555;
+}
+
+/* Media Query para pantallas pequeñas */
+@media (max-width: 768px) {
+    #three-images .image-row {
+        flex-direction: column; /* Apilar las imágenes en una columna */
+        align-items: center;
+    }
+
+    #three-images .image-item {
+        max-width: 90%; /* Reduce el tamaño de las imágenes en pantallas pequeñas */
+    }
+}
+
+
+
+
+
+/* Estilos del pie de página */
+.footer {
+    background-color: #333333;
+    color: #fff;
+    padding: 40px 20px;
+    font-size: 16px;
+}
+
+.footer-contenedor {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-info,
+.footer-links,
+.footer-contacto {
+    flex: 1 1 30%;
+    padding: 20px;
+}
+
+.footer-info h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.footer-info p {
+    font-size: 14px;
+    color: #ccc;
+}
+
+.footer-links h4,
+.footer-contacto h4 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links ul li {
+    margin: 8px 0;
+}
+
+.footer-links ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+.footer-links ul li a:hover {
+    color: #D79DEB;
+}
+
+.footer-contacto p {
+    font-size: 14px;
+    color: #ccc;
+    margin-bottom: 8px;
+}
+
+.social-icons {
+    display: flex;
+    gap: 10px;
+}
+
+.social-icon img {
+    width: 30px;
+    height: 30px;
+    transition: transform 0.3s ease;
+}
+
+.social-icon img:hover {
+    transform: scale(1.1);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .footer-contenedor {
+        flex-direction: column;
+    }
+
+    .footer-info,
+    .footer-links,
+    .footer-contacto {
+        flex: 1 1 100%;
+        margin-bottom: 20px;
+    }
+}
+
+
+
+
+
+/* Estilo del botón de WhatsApp */
+#whatsapp-button {
+    position: fixed;
+    bottom: 20px; /* 20px desde la parte inferior de la página */
+    right: 20px; /* 20px desde la parte derecha de la página */
+    width: 60px; /* Tamaño del botón */
+    height: 60px; /* Tamaño del botón */
+    background-color: #8750AB; /* Color de fondo de WhatsApp */
+    border-radius: 50%; /* Hacer el botón redondo */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Sombra del botón */
+    overflow: hidden; /* Asegura que la imagen se mantenga dentro del botón redondo */
+    transition: transform 0.3s ease; /* Animación para el zoom */
+}
+
+#whatsapp-button img {
+    width: 90%; /* Hacer que la imagen ocupe el 80% del tamaño del botón */
+    height: 90%; /* Hacer que la imagen ocupe el 80% del tamaño del botón */
+    object-fit: cover; /* Asegura que la imagen se ajuste sin deformarse */
+}
+
+/* Zoom al pasar el ratón */
+#whatsapp-button:hover {
+    transform: scale(1.1); /* Zoom cuando se pase el ratón */
+}
+.services{
+    background-image: linear-gradient(
+        #141414b3,
+        rgba(0, 0, 0, 0.7)),
+        url(images/productos.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed; 
+   
+}
+
+.services-content{
+    text-align: center;
+}
+
+.services-content h2{
+    font-size: 40px;
+    line-height: 70px;
+    color: #F9FAFC;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+}
+
+.services-content p{
+    font-size: 15px;
+    color: #C5C5C5;
+    margin-bottom: 50px;
+    padding: 0 100px;
+}
+
+.services-group{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 50px;
+}
+
+.services-1{
+    padding: 0 100px;
+}
+
+.services-1 img{
+    width: 50px;
+    margin-bottom: 15px;
+}
+
+.services-1 h3{
+    color: #D79DEB;
+    font-size: 18px;
+}
+.btn-1:hover{
+    background-color: #8750AB;
+}
+.btn-1 {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 15px;
+    background-color: #8750AB;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 1em;
+    margin: 30px; /* Espacio fuera del botón */
+}
+/* Estilo del preloader */
+#preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #f9f9f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+/* Estilo del spinner */
+.spinner {
+    width: 50px;
+    height: 50px;
+    border: 5px solid #ccc;
+    border-top: 5px solid #8750AB;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+/* Animación de rotación */
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
